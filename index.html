@@ -14,6 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style2.css">
 
     <style>
         body {
@@ -167,9 +168,9 @@
 
         .navbar {
             margin-bottom: 0;
-            background: linear-gradient(to right, #000428, #004e92);
+            background: linear-gradient(90deg, #000428, #004e92);
             z-index: 9999;
-            border: 0;
+            border: 1;
             font-size: 12px !important;
             line-height: 1.42857143 !important;
             letter-spacing: 4px;
@@ -276,7 +277,6 @@
                     <li><a href="#services">SERVICES</a></li>
                     <li><a href="#about">ABOUT</a></li>
                     <li><a href="#portfolio">PROJECTS</a></li>
-                    <!-- <li><a href="#pricing">PRICING</a></li> -->
                     <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
@@ -284,72 +284,36 @@
     </nav>
 
 
-    <div class="jumbotron text-center">
-        <h1>InnoSite Tech Solutions</h1>
-        <h3>Empowering Your Business with Innovative Web Solutions</h3>
-        <p><strong>We are excited to introduce our cutting-edge AI software solutions designed specifically for the
-                education sector. These innovative tools are crafted to enhance learning experiences, improve
-                educational outcomes, and streamline administrative processes. Our AI software is now available for you
-                to explore in the Products section. Discover how our technology can transform education with
-                personalized learning, advanced analytics, and more.</strong> </p>
-        <!-- <p>We specialize in Frontend Web Development and many more</p> -->
-        <form>
-            <!-- <div class="input-group">
-      <input type="email" class="form-control" size="50" placeholder="Email Address" required>
-      <div class="input-group-btn">
-        <button type="button" class="btn btn-danger">Subscribe</button>
-      </div> -->
-    </div>
-    </form>
-    </div>
-
-    <div class="container bg-grey" style="width: 50%; border-radius: 25px;">
-        <!-- <h2>Our Expertise</h2>   -->
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <!-- <li data-target="#myCarousel" data-slide-to="4"></li> -->
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-                <div class="item active">
-                    <img src="./imgs/web.jpeg" alt="website" style="width:100%; border-radius: 25px;">
-                </div>
-
-                <div class="item">
-                    <img src="./imgs/mobile.jpeg" alt="Chicago" style="width:100%; border-radius: 25px;">
-                </div>
-
-
-                <div class="item">
-                    <img src="./imgs/image.png" alt="New york" style="width:100%; border-radius: 25px;">
-                </div>
-
-                <div class="item">
-                    <img src="./imgs/video.jpg" alt="New york" style="width:100%; border-radius: 25px;">
-                </div>
-
-                <!-- <div class="item">
-                    <img src="./imgs/content.png" alt="New york" style="width:100%;">
-                </div> -->
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <span class="sr-only">Next</span>
-            </a>
+    <section class="home">
+        <video class="video-slide active" src="./imgs/1.mp4" autoplay muted loop></video>
+        <!-- <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="5.mp4" autoplay muted loop></video> -->
+        <div class="content active">
+          <h1>INNOSITE<br><span>TECH SOLUTIONS</span></h1>
+          <p>We are excited to introduce our cutting-edge AI software solutions designed specifically for the
+            education sector. These innovative tools are crafted to enhance learning experiences, improve
+            educational outcomes, and streamline administrative processes. Our AI software is now available for you
+            to explore in the Products section. Discover how our technology can transform education with
+            personalized learning, advanced analytics, and more</p>
+          <a href="./products/products.html">Read More</a>
+          <a href="mailto:innositetechsolutions@gmail.com" style="background: none; color: #f6f6f6; font-size: 20px;"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.linkedin.com/company/innosite-tech-solution/" style="background: none; color: #f6f6f6; font-size: 20px;"><i class="fas fa-envelope"></i></a>
         </div>
-    </div>
+        <!-- <div class="media-icons">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fas fa-envelope"></i></a>
+        </div> -->
+        <!-- <div class="slider-navigation">
+          <div class="nav-btn active"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+        </div> -->
+      </section>
+
 
     <!-- Container (Services Section) -->
     <div id="services" class="container-fluid text-center">
@@ -361,42 +325,42 @@
                 <a href="./services/website.html" style="text-decoration: none; color: inherit;">
                     <i class="bi bi-code-slash logo-small"></i>
                     <h4>Website Development</h4>
-                    <p>We create user friendly Website according to needs.</p>
+                    <p>.</p>
                 </a>
             </div>
             <div class="col-sm-4">
                 <a href="./services/mobile.html" style="text-decoration: none; color: inherit;">
                     <i class="bi bi-phone logo-small"></i>
                     <h4>Mobile Application</h4>
-                    <p>We create User-friendly Mobile Applications (Android / iOS).</p>
+                    <p>.</p>
                 </a>
             </div>
             <div class="col-sm-4">
                 <a href="./services/photo.html" style="text-decoration: none; color: inherit;">
                     <i class="bi bi-image logo-small"></i>
                     <h4>Photo Editing</h4>
-                    <p>We Edit Photographs using professionals tools.</p>
+                    <p>.</p>
                 </a>
             </div>
             <div class="col-sm-4">
                 <a href="./services/video.html" style="text-decoration: none; color: inherit;">
                     <i class="bi bi-film logo-small"></i>
                     <h4>Video Editing</h4>
-                    <p>We Edit Videos using professionals tools.</p>
+                    <p>.</p>
                 </a>
             </div>
             <div class="col-sm-4">
                 <a href="./services/content.html" style="text-decoration: none; color: inherit;">
                     <i class="bi bi-chat-left-text logo-small"></i>
                     <h4>Content Writing</h4>
-                    <p>We write SEO friendly content.</p>
+                    <p>.</p>
                 </a>
             </div>
             <div class="col-sm-4">
                 <a href="hardwork.html" style="text-decoration: none; color: inherit;">
                     <i class="bi bi-tools logo-small"></i>
                     <h4 style="color:#303030;">Hard Work</h4>
-                    <p>We provide service related to customer issues.</p>
+                    <p>.</p>
                 </a>
             </div>
             
@@ -455,7 +419,7 @@
                 <div class="thumbnail">
                     <img src="./imgs/portfolio/6.jpg" alt="Crystal Clear Constructions" width="400" height="300">
                     <p><strong>Crystal Clear Constructions</strong></p>
-                    <p>Created a Virtual page for representation of their construction work</p>
+                    <p>Virtual presence of Crystal Clear Constructions</p>
                 </div>
             </div>
             <div class="col-sm-4">
@@ -681,6 +645,8 @@
         </div>
     </footer>
 
+
+    <script src="main2.js"></script>
     <script>
         $(document).ready(function () {
             // Add smooth scrolling to all links in navbar + footer link

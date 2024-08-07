@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page - With Background Video Slider | Anime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style2.css">
+    <style>
+                h2 {
+            font-size: 24px;
+            text-transform: uppercase;
+            text-align: center;
+            color: #303030;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            color: #303030;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        img {
+            border: 2px solid #004e92;
+            border-radius: 15px;
+        }
+
+        .jumbotron {
+            background: linear-gradient(to right, #000428, #004e92);
+            color: #fff;
+            padding: 100px 25px;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        .logo-small {
+            color: linear-gradient(to right, #000428, #004e92);
+            ;
+            font-size: 50px;
+        }
+
+        .logo {
+            color: linear-gradient(to right, #000428, #004e92);
+            ;
+            font-size: 200px;
+        }
+
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: none;
+            border-radius: 0;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            margin-bottom: 10px;
+        }
+
+        .carousel-control.right,
+        .carousel-control.left {
+            background-image: none;
+            color: linear-gradient(to right, #000428, #004e92);
+        }
+
+        .carousel-indicators li {
+            border-color: #000428;
+        }
+
+        .carousel-indicators li.active {
+            background: linear-gradient(to right, #000428, #004e92);
+        }
+
+        .item h4 {
+            font-size: 19px;
+            line-height: 1.375em;
+            font-weight: 400;
+            font-style: italic;
+            margin: 70px 0;
+        }
+
+        .item span {
+            font-style: normal;
+        }
+
+        .panel {
+            border: 1px solid #000428;
+            border-radius: 0 !important;
+            transition: box-shadow 0.5s;
+        }
+
+        .panel:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+        }
+
+        .panel-footer .btn:hover {
+            border: 1px solid#000428;
+            background-color: #fff !important;
+            color: linear-gradient(to right, #000428, #004e92);
+        }
+
+        .panel-heading {
+            color: #fff !important;
+            background: linear-gradient(to right, #000428, #004e92) !important;
+            padding: 25px;
+            border-bottom: 1px solid transparent;
+            border-top-left-radius: 0px;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+        }
+
+        .panel-footer {
+            background-color: white !important;
+        }
+
+        .panel-footer h3 {
+            font-size: 32px;
+        }
+
+        .panel-footer h4 {
+            color: #aaa;
+            font-size: 14px;
+        }
+
+        .panel-footer .btn {
+            margin: 15px 0;
+            background: linear-gradient(to right, #000428, #004e92);
+            color: #fff;
+        }
+
+        .follow a {
+            font-size: 2.5rem;
+            color: #004e92;
+            margin: 0 .7rem;
+        }
+
+        .follow a:hover {
+            color: #000428;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            background: linear-gradient(to right, #000428, #004e92);
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+            font-family: Montserrat, sans-serif;
+        }
+
+        .navbar li a,
+        .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover,
+        .navbar-nav li.active a {
+            color: #000428 !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: linear-gradient(to right, #000428, #004e92);
+        }
+
+        .slideanim {
+            visibility: hidden;
+        }
+
+        .slide {
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            visibility: visible;
+            color: #000428;
+
+        }
+
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .col-sm-4 {
+                text-align: center;
+                margin: 25px 0;
+            }
+
+            .btn-lg {
+                width: 100%;
+                margin-bottom: 35px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .logo {
+                font-size: 150px;
+                color: #000428;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="brand">INNOSITE</a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="./products/products.html">PRODUCT</a>
+                <a href="#services">SERVICES</a>
+                <a href="#about">ABOUT US</a>
+                <a href="#portfolio">PROJECTS</a>
+                <a href="#contact">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="home">
+        <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+        <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+        <div class="content active">
+          <h1>Kakashi.<br><span>Ninja Man</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="content">
+          <h1>Train Ride.<br><span>Anime Girl</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="content">
+          <h1>Sparkle.<br><span>Butterfly</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="content">
+          <h1>Anime Demon.<br><span>Girl</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="content">
+          <h1>Manga Smile.<br><span>Anime</span></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna anime. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut farhan ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum daily web design nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <a href="#">Read More</a>
+        </div>
+        <div class="media-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="slider-navigation">
+          <div class="nav-btn active"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+        </div>
+      </section>
+
+          <!-- Container (Services Section) -->
+    <div id="services" class="container-fluid text-center">
+        <h2>SERVICES</h2>
+        <h4>What we offer</h4>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <a href="./services/website.html" style="text-decoration: none; color: inherit;">
+                    <i class="bi bi-code-slash logo-small"></i>
+                    <h4>Website Development</h4>
+                    <p>We create user friendly Website according to needs.</p>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="./services/mobile.html" style="text-decoration: none; color: inherit;">
+                    <i class="bi bi-phone logo-small"></i>
+                    <h4>Mobile Application</h4>
+                    <p>We create User-friendly Mobile Applications (Android / iOS).</p>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="./services/photo.html" style="text-decoration: none; color: inherit;">
+                    <i class="bi bi-image logo-small"></i>
+                    <h4>Photo Editing</h4>
+                    <p>We Edit Photographs using professionals tools.</p>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="./services/video.html" style="text-decoration: none; color: inherit;">
+                    <i class="bi bi-film logo-small"></i>
+                    <h4>Video Editing</h4>
+                    <p>We Edit Videos using professionals tools.</p>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="./services/content.html" style="text-decoration: none; color: inherit;">
+                    <i class="bi bi-chat-left-text logo-small"></i>
+                    <h4>Content Writing</h4>
+                    <p>We write SEO friendly content.</p>
+                </a>
+            </div>
+            <div class="col-sm-4">
+                <a href="hardwork.html" style="text-decoration: none; color: inherit;">
+                    <i class="bi bi-tools logo-small"></i>
+                    <h4 style="color:#303030;">Hard Work</h4>
+                    <p>We provide service related to customer issues.</p>
+                </a>
+            </div>
+            
+        </div>
+        <div class="text-right">
+            <a href="./services/services.html" class="btn btn-default">View More...</a>
+        </div>
+    </div>
+
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>About Company</h2><br>
+                <h4>InnoSite Tech Solutions: Crafting cutting-edge digital solutions, we specialize in website
+                    development, mobile app creation, and comprehensive web services. Our passion lies in delivering
+                    customized, high-quality products tailored to the unique needs of each client. We empower businesses
+                    with innovative technology that drives growth and success.</h4>
+                <br>
+                <p>At InnoSite Tech Solutions, we are driven by a passion for innovation and excellence in the digital
+                    realm. Our team of experienced developers and creative designers specializes in providing bespoke
+                    website development, mobile app creation, and comprehensive web solutions tailored to meet the
+                    specific needs of our clients. We believe in the transformative power of technology and are
+                    committed to delivering solutions that not only look great but also provide exceptional
+                    functionality and performance. Our client-centric approach ensures that we understand your vision
+                    and goals, working collaboratively to bring them to life. Whether you're launching a new venture or
+                    enhancing an existing one, InnoSite Tech Solutions is dedicated to helping you succeed in the
+                    digital landscape. We prioritize user-friendly designs, optimized performance, and search engine
+                    visibility, ensuring your business stands out online..</p>
+                <br><button class="btn btn-default btn-lg"
+                    onclick="window.location.href='mailto:innositetechsolutions@gmail.com?subject=Inquiry&body=Hello,%20I%20would%20like%20to%20get%20in%20touch%20with%20you.'">
+                    Get in Touch
+                </button>
+            </div>
+            <div class="col-sm-4">
+                <!-- <span class="glyphicon glyphicon-signal logo"></span> -->
+                <span class="glyphicon glyphicon-globe logo slideanim"></span>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Container (Portfolio Section) -->
+    <div id="portfolio" class="container-fluid text-center">
+        <h2>Successfully Delivered Projects</h2><br>
+        <h4>What we have Created and Delivered Successfully</h4>
+        <div class="row text-center slideanim">
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./imgs/portfolio/5.jpg" alt="S. V. Consultants" width="400" height="300">
+                    <p><strong>S. V. Consultants</strong></p>
+                    <p>Consulting website for a firm named S. V. Consultants</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./imgs/portfolio/6.jpg" alt="Crystal Clear Constructions" width="400" height="300">
+                    <p><strong>Crystal Clear Constructions</strong></p>
+                    <p>Created a Virtual page for representation of their construction work</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./imgs/portfolio/1.png" alt="Magic Properties" width="400" height="300">
+                    <p><strong>Magic Properties</strong></p>
+                    <p>House Renting platform</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./imgs/portfolio/4.jpg" alt="Rent-Ally" width="400" height="300">
+                    <p><strong>Rent-Ally</strong></p>
+                    <p>A place where you can rent your cars virtually</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./imgs/portfolio/2.png" alt="Homeverse" width="400" height="300">
+                    <p><strong>Homeverse</strong></p>
+                    <p>Buying Dream Home</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail">
+                    <img src="./imgs/portfolio/3.png" alt="Weather" width="400" height="300">
+                    <p><strong>Weather</strong></p>
+                    <p>Check the right Weather</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="text-right">
+            <a href="./projects.html" class="btn btn-default">View More...</a>
+        </div>
+    </div>
+
+
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <!-- <span class="glyphicon glyphicon-globe logo slideanim"></span> -->
+                <span class="glyphicon glyphicon-signal logo slideanim"></span>
+
+            </div>
+            <div class="col-sm-8">
+                <h2>Our Values</h2><br>
+                <h4><strong>MISSION:</strong> Our mission at InnoSite Tech Solutions is to empower businesses with
+                    innovative and high-quality digital solutions. We aim to transform ideas into reality through expert
+                    website development, mobile app creation, and comprehensive web services. By leveraging the latest
+                    technology and a client-focused approach, we strive to deliver exceptional value and drive success
+                    for our clients in the ever-evolving digital landscape. Our commitment to excellence ensures that
+                    each project we undertake is not only visually compelling but also optimized for performance,
+                    security, and search engine visibility. At InnoSite Tech Solutions, we partner with you to navigate
+                    the digital world, turning your vision into impactful and measurable results.</h4><br>
+                <h4><strong>VISION:</strong> Our vision at InnoSite Tech Solutions is to become a leader in digital
+                    transformation, recognized for our creativity, technical expertise, and dedication to excellence. We
+                    aspire to create a future where businesses of all sizes seamlessly leverage cutting-edge technology
+                    to achieve their goals and connect with their audiences. Through continuous innovation and a strong
+                    focus on customer success, we aim to set new standards in the industry and inspire positive change
+                    in the digital world. By pioneering digital solutions that are both effective and sustainable,
+                    InnoSite Tech Solutions strives to empower businesses to thrive in a competitive landscape and to be
+                    at the forefront of the digital evolution.</h4>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact" class="container-fluid bg-grey">
+        <h2 class="text-center">CONTACT</h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <p>Contact us and we'll get back to you within 24 hours.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Remote Culture</p>
+                <!-- <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p> -->
+                <p><span class="glyphicon glyphicon-envelope"></span> innositetechsolutions@gmail.com</p>
+            </div>
+            <form action="https://formspree.io/f/mqazqawv" method="post">
+                <div class="col-sm-7 slideanim">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="number" name="number" placeholder="Mobile" type="number"
+                                required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="email" placeholder="Email" type="email"
+                                required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment"
+                        rows="5"></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default" type="submit">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Image of location/map -->
+    <!-- <img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%"> -->
+
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p> ©️ by <a href="https://shaikhmdharis.github.io/portfolio/" title="Md. Haris Shaikh"> team <strong>INNOSITE
+                    TECH SOLUTIONS </strong> </a></p>
+        <div class="follow">
+            <a href="mailto:innositetechsolutions@gmail.com" class="fas fa-envelope"></a>
+            <a href="https://www.linkedin.com/company/innosite-tech-solution/" class="fab fa-linkedin"></a>
+            <!-- <a href="# " class="fab fa-medium"></a>
+                        <a href="#" class="fab fa-github"></a> -->
+        </div>
+    </footer>
+
+      <script src="main2.js"></script>
+      <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links in navbar + footer link
+            $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 900, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function () {
+                $(".slideanim").each(function () {
+                    var pos = $(this).offset().top;
+
+                    var winTop = $(window).scrollTop();
+                    if (pos < winTop + 600) {
+                        $(this).addClass("slide");
+                    }
+                });
+            });
+        })
+    </script>
+</body>
+</html>
